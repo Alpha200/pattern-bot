@@ -1,0 +1,19 @@
+monitors:
+  - name: Slam (Bochum)
+    url: https://www.science-slam.com/termine_tickets.htm
+    interval: 1d
+    alert_when: present
+    pattern:
+      selector: div#datelist
+      regex: Bochum
+  - name: Slam (Dortmund)
+    url: https://www.science-slam.com/termine_tickets.htm
+    interval: 1d
+    alert_when: present
+    pattern:
+      selector: div#datelist
+      regex: Dortmund
+notifiers:
+  telegram:
+    bot_token: <bot_token>
+    chat_id: <chat_id>

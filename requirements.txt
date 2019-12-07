@@ -1,0 +1,5 @@
+apscheduler
+PyYAML
+notifiers
+requests
+beautifulsoup4
