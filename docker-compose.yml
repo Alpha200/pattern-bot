@@ -1,7 +1,6 @@
 version: '2.0'
 services:
   patternbot:
-    build: .
-    image: registry.sendzik.eu/dsendzik/patternbot
+    image: alpha200/patternbot
     volumes:
       - ./config.yaml:/usr/src/app/config.yaml:ro
