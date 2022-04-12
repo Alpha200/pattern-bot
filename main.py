@@ -19,7 +19,7 @@ def run_monitor(monitor):
     soup = BeautifulSoup(result.content, "html.parser")
 
     for selected in soup.select(monitor["pattern"]["selector"]):
-        if re.match(monitor["pattern"]["regex"], selected.text):
+        if re.search(monitor["pattern"]["regex"], selected.text):
             matched = True
 
     should_alert = (matched and monitor["alert_when"] == "present") or \
